@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="?attr/actionBarSize"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#FFFFFF"
+        android:ems="4"
+        android:gravity="center"
+        android:hint="00:00:00"
+        android:inputType="time"
+        android:maxLength="8"
+        android:singleLine="true"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="00:00"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+
+    <ProgressBar
+        android:id="@+id/bar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="434dp"
+        android:layout_height="597dp"
+        android:layout_centerInParent="true"
+        android:progress="100"
+        android:progressDrawable="@drawable/circle" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="3dp"
+        android:text="START"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/timer"
+        android:text="Reset"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="260dp"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="WORK" />
+
+    <Button
+        android:id="@+id/rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="BREAK" />
+
+    <EditText
+        android:id="@+id/workInput"
+        android:layout_width="91dp"
+        android:layout_height="56dp"
+        android:layout_above="@+id/work"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="25:00" />
+
+    <EditText
+        android:id="@+id/restInput"
+        android:layout_width="91dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_above="@id/rest"
+        android:gravity="center"
+        android:text="5:00"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
