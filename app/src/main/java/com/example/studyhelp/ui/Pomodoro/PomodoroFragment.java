@@ -1,6 +1,5 @@
-package com.example.studyhelp.ui.home;
+package com.example.studyhelp.ui.Pomodoro;
 
-import android.app.Activity;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -18,20 +17,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
-import com.example.studyhelp.MainActivity;
 import com.example.studyhelp.R;
 
 import java.util.Locale;
+import java.util.Random;
 
-public class HomeFragment extends Fragment {
+//public class HomeFragment extends Fragment {
+
+public class PomodoroFragment extends Fragment {
+
+
+    private final String[] quotes = {"Don’t let what you cannot do interfere with what you can do",
+                                     "Strive for progress, not perfection",
+                                     "There are no shortcuts to any place worth going",
+                                     "Failure is the opportunity to begin again more intelligently",
+                                     "Teachers can open the door, but you must enter it yourself",
+                                     "The beautiful thing about learning is that no one can take it away from you"};
 
     // Physical App elements
     private TextView text;
+    private TextView quote;
     private EditText user;
     private EditText userWork;
     private EditText userRest;
@@ -49,11 +56,18 @@ public class HomeFragment extends Fragment {
     private long timeLeft;
     private boolean running;
 
+    public PomodoroFragment() {
+        // Required empty public constructor
+    }
+
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.fragment_pomodoro, container, false);
+
+
 
         user = root.findViewById(R.id.input);
+        quote = root.findViewById(R.id.quote);
         userWork = root.findViewById(R.id.workInput);
         userRest = root.findViewById(R.id.restInput);
         text = root.findViewById(R.id.timer);
@@ -62,6 +76,10 @@ public class HomeFragment extends Fragment {
         work = root.findViewById(R.id.work);
         rest = root.findViewById(R.id.rest);
         bar = root.findViewById(R.id.bar);
+
+        Random rand = new Random();
+        int n = rand.nextInt(7);
+        quote.setText(quotes[n]);
 
         user.setTag(null);
         user.addTextChangedListener(timeWatcher);
@@ -92,6 +110,7 @@ public class HomeFragment extends Fragment {
                 // Only change the start time if the user actually changes it
                 if(counter == 0){
                     startTime = input;
+                    bar.setProgress(0);
                 }
                 counter = 1;
                 timeLeft = input;

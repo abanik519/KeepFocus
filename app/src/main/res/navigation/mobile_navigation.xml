@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.studyhelp.ui.home.HomeFragment"
+        android:name="com.example.studyhelp.ui.Pomodoro.PomodoroFragment"
         android:label="Pomodoro"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_pomodoro" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.studyhelp.ui.dashboard.DashboardFragment"
+        android:name="com.example.studyhelp.ui.GWD.GWDFragment"
         android:label="Get Work Done"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dbc" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.studyhelp.ui.notifications.NotificationsFragment"
+        android:name="com.example.studyhelp.ui.DBC.DBCFragment"
         android:label="Don't Break the Chain"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_gwd" />
 </navigation>

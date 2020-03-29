@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">StudyHelp</string>
+    <string name="app_name">KeepFocus</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Pomodoro_description">The Pomodoro technique uses a timer to break down work into intervals seperated by short breaks. Simply start the timer with your work time and afterwards take a short break.</string>
+    <string name="GetWorkDone_Description">The Get Work Done(GTD) technique consists of organizing your tasks as long term or short term and doing the short term tasks first to get you productive. If a task can be done in under 20 minutes, put it as short term, otherwise put it as long term. Simply tap the type of task that you wish to add and press the button. To delete you need to open the tasks and tap on which ones you wish to delete.</string>
+    <string name="DontBreakChain_Description">The Don\'t Break The Chain technique consists of listing your tasks and creating a minimum goal(s) for each task before it\'s considered complete. Simply add a task and tap on it to add a goal. To delete a goal you need to tap on it and to delete a task you need to delete all goals than tap on the task.</string>
 </resources>
